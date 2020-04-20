@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tianta.tc.db.mapper.TcRuleMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.tianta.tc.db.entity.TcRule">
+        <id column="id" property="id"/>
+        <result column="mid" property="mid"/>
+        <result column="rule_name" property="ruleName"/>
+        <result column="rule_code" property="ruleCode"/>
+        <result column="rule_expression" property="ruleExpression"/>
+        <result column="rule_desc" property="ruleDesc"/>
+        <result column="is_default" property="isDefault"/>
+        <result column="create_time" property="createTime"/>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, mid, rule_name, rule_code, rule_expression, rule_desc, is_default_rule, create_time
+    </sql>
+
+</mapper>

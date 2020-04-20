@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tianta.tc.db.mapper.TcSequenceDataMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.tianta.tc.db.entity.TcSequenceData">
+        <id column="id" property="id"/>
+        <result column="seq_id" property="seqId"/>
+        <result column="seq_item_name" property="seqItemName"/>
+        <result column="seq_item_code" property="seqItemCode"/>
+        <result column="seq_item_data" property="seqItemData"/>
+        <result column="seq_item_type" property="seqItemType"/>
+        <result column="interval_time" property="intervalTime"/>
+        <result column="is_compare" property="isCompare"/>
+        <result column="status" property="status"/>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, seq_id, seq_item_name, seq_item_code, seq_item_data, seq_item_type, interval_time, is_compare, status
+    </sql>
+
+</mapper>

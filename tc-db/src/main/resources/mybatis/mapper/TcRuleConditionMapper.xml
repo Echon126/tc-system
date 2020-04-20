@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tianta.tc.db.mapper.TcRuleConditionMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.tianta.tc.db.entity.TcRuleCondition">
+        <id column="id" property="id"/>
+        <result column="rule_id" property="ruleId"/>
+        <result column="condition_name" property="conditionName"/>
+        <result column="condition_flag" property="conditionFlag"/>
+        <result column="condition_code" property="conditionCode"/>
+        <result column="condition_method" property="conditionMethod"/>
+        <result column="condition_value" property="conditionValue"/>
+        <result column="max_value" property="maxValue"/>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, rule_id, condition_name, condition_flag, condition_code, condition_method, condition_value, max_value
+    </sql>
+
+</mapper>

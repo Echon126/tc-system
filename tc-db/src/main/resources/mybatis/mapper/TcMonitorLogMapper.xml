@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tianta.tc.db.mapper.TcMonitorLogMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.tianta.tc.db.entity.TcMonitorLog">
+        <id column="id" property="id"/>
+        <result column="sid" property="sid"/>
+        <result column="mid" property="mid"/>
+        <result column="sat_name" property="satName"/>
+        <result column="station_name" property="stationName"/>
+        <result column="command_id" property="commandId"/>
+        <result column="command_code" property="commandCode"/>
+        <result column="command_name" property="commandName"/>
+        <result column="command_data" property="commandData"/>
+        <result column="send_time" property="sendTime"/>
+        <result column="execute_time" property="executeTime"/>
+        <result column="process_desc" property="processDesc"/>
+        <result column="send_operator" property="sendOperator"/>
+        <result column="create_time" property="createTime"/>
+        <result column="status" property="status"/>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, sid, mid, sat_name, station_name, command_id, command_code, command_name, command_data, send_time, execute_time, process_desc, send_operator, create_time, status
+    </sql>
+
+</mapper>

@@ -12,10 +12,12 @@ public class TcSequenceData implements Serializable {
     private Integer seqId;
     private String seqItemName;
     private String seqItemCode;
+    private String seqItemData;
     private Integer seqItemType;
     private Integer intervalTime;
     private Integer isCompare;
     private Integer status;
+
 
     public Integer getId() {
         return id;
@@ -47,6 +49,14 @@ public class TcSequenceData implements Serializable {
 
     public void setSeqItemCode(String seqItemCode) {
         this.seqItemCode = seqItemCode;
+    }
+
+    public String getSeqItemData() {
+        return seqItemData;
+    }
+
+    public void setSeqItemData(String seqItemData) {
+        this.seqItemData = seqItemData;
     }
 
     public Integer getSeqItemType() {

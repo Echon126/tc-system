@@ -8,7 +8,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: root
-    url: jdbc:mysql://localhost:3306/tc_system?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=round&serverTimezone=GMT
+    url: jdbc:mysql://localhost:3306/tc-system?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=round&serverTimezone=GMT
     hikari:
       connection-test-query: SELECT 1
       maximum-pool-size: 30
@@ -16,3 +16,19 @@ spring:
       pool-name: DataPoolHikari
       connection-timeout: 50000
       max-lifetime: 50000
+
+
+mybatis-plus:
+  mapper-locations: classpath*:/mybatis/mappers/*.xml
+  type-aliases-package: com.tianta.tc.db.entity
+  type-aliases-super-type: java.lang.Object
+  configuration:
+    map-underscore-to-camel-case: true
+  global-config:
+    db-config:
+      logic-delete-value: 0
+      logic-not-delete-value: 1
+      id-type: 0
+
+
+
