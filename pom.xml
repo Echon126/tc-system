@@ -8,6 +8,7 @@
         <module>tc-platform</module>
         <module>tc-base</module>
         <module>tc-web</module>
+        <module>tc-db</module>
     </modules>
 
     <groupId>org.tc</groupId>
