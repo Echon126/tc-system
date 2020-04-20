@@ -23,6 +23,11 @@
             <artifactId>tc-platform</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
-
+        
+        <dependency>
+            <groupId>org.tc</groupId>
+            <artifactId>tc-db</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 </project>
