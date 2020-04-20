@@ -27,13 +27,4 @@ public class GroovyController {
         String obj = groovyScriptEngine.executeString(script, map);
         return obj;
     }
-
-
-    @GetMapping("/tc/command/{script}")
-    public TcCommandData queryTcCommandDataList(@PathVariable String script) {
-        //String script = "sysScript.getCommand('X221')";
-        Map<String, Object> map = new HashMap<String, Object>();
-        TcCommandData o = (TcCommandData) groovyScriptEngine.executeObject(script, map);
-        return o;
-    }
 }

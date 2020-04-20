@@ -88,6 +88,12 @@
             <artifactId>hutool-crypto</artifactId>
             <version>4.1.10</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.51</version>
+        </dependency>
     </dependencies>
 
 </project>
