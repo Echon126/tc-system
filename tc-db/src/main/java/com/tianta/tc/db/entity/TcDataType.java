@@ -1,6 +1,7 @@
 package com.tianta.tc.db.entity;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 /**
  * @author ZKTT
@@ -70,5 +71,24 @@ public class TcDataType  implements Serializable {
 
     public void setStatus(Integer status) {
         this.status = status;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        TcDataType that = (TcDataType) o;
+        return Objects.equals(id, that.id) &&
+                Objects.equals(pid, that.pid) &&
+                Objects.equals(mid, that.mid) &&
+                Objects.equals(typeCode, that.typeCode) &&
+                Objects.equals(typeName, that.typeName) &&
+                Objects.equals(typeDesc, that.typeDesc) &&
+                Objects.equals(status, that.status);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, pid, mid, typeCode, typeName, typeDesc, status);
     }
 }

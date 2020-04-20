@@ -1,6 +1,7 @@
 package com.tianta.tc.db.entity;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 /**
  * @author ZKTT
@@ -79,5 +80,25 @@ public class TcRuleCondition implements Serializable {
 
     public void setMaxValue(Integer maxValue) {
         this.maxValue = maxValue;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        TcRuleCondition that = (TcRuleCondition) o;
+        return Objects.equals(id, that.id) &&
+                Objects.equals(ruleId, that.ruleId) &&
+                Objects.equals(conditionName, that.conditionName) &&
+                Objects.equals(conditionFlag, that.conditionFlag) &&
+                Objects.equals(conditionCode, that.conditionCode) &&
+                Objects.equals(conditionMethod, that.conditionMethod) &&
+                Objects.equals(conditionValue, that.conditionValue) &&
+                Objects.equals(maxValue, that.maxValue);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, ruleId, conditionName, conditionFlag, conditionCode, conditionMethod, conditionValue, maxValue);
     }
 }

@@ -2,6 +2,7 @@ package com.tianta.tc.db.entity;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.Objects;
 
 /**
  * @author ZKTT
@@ -80,5 +81,25 @@ public class TcRule implements Serializable {
 
     public void setCreateTime(Date createTime) {
         this.createTime = createTime;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        TcRule tcRule = (TcRule) o;
+        return Objects.equals(id, tcRule.id) &&
+                Objects.equals(mid, tcRule.mid) &&
+                Objects.equals(ruleName, tcRule.ruleName) &&
+                Objects.equals(ruleCode, tcRule.ruleCode) &&
+                Objects.equals(ruleExpression, tcRule.ruleExpression) &&
+                Objects.equals(ruleDesc, tcRule.ruleDesc) &&
+                Objects.equals(isDefault, tcRule.isDefault) &&
+                Objects.equals(createTime, tcRule.createTime);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, mid, ruleName, ruleCode, ruleExpression, ruleDesc, isDefault, createTime);
     }
 }

@@ -2,6 +2,7 @@ package com.tianta.tc.db.entity;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.Objects;
 
 /**
  * @author ZKTT
@@ -143,5 +144,32 @@ public class TcMonitorLog implements Serializable {
 
     public void setStatus(Integer status) {
         this.status = status;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        TcMonitorLog that = (TcMonitorLog) o;
+        return Objects.equals(id, that.id) &&
+                Objects.equals(sid, that.sid) &&
+                Objects.equals(mid, that.mid) &&
+                Objects.equals(satName, that.satName) &&
+                Objects.equals(stationName, that.stationName) &&
+                Objects.equals(commandId, that.commandId) &&
+                Objects.equals(commandCode, that.commandCode) &&
+                Objects.equals(commandName, that.commandName) &&
+                Objects.equals(commandData, that.commandData) &&
+                Objects.equals(sendTime, that.sendTime) &&
+                Objects.equals(executeTime, that.executeTime) &&
+                Objects.equals(processDesc, that.processDesc) &&
+                Objects.equals(sendOperator, that.sendOperator) &&
+                Objects.equals(createTime, that.createTime) &&
+                Objects.equals(status, that.status);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, sid, mid, satName, stationName, commandId, commandCode, commandName, commandData, sendTime, executeTime, processDesc, sendOperator, createTime, status);
     }
 }

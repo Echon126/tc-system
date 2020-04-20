@@ -2,6 +2,7 @@ package com.tianta.tc.db.entity;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.Objects;
 
 /**
  * @author ZKTT
@@ -80,5 +81,25 @@ public class TcSequence implements Serializable {
 
     public void setStatus(Integer status) {
         this.status = status;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        TcSequence that = (TcSequence) o;
+        return Objects.equals(id, that.id) &&
+                Objects.equals(mid, that.mid) &&
+                Objects.equals(sequenceName, that.sequenceName) &&
+                Objects.equals(sequenceCode, that.sequenceCode) &&
+                Objects.equals(sequenceOrder, that.sequenceOrder) &&
+                Objects.equals(createTime, that.createTime) &&
+                Objects.equals(creator, that.creator) &&
+                Objects.equals(status, that.status);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, mid, sequenceName, sequenceCode, sequenceOrder, createTime, creator, status);
     }
 }
